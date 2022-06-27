@@ -1,0 +1,32 @@
+{% extends 'aecsweb/basic.html' %}
+{% load static %}
+
+{% block css %}
+<link rel="stylesheet" href="{% static 'aecsweb/css/notices.css' %}">
+{% endblock%}
+
+{% block body %}
+<div class="main">
+    <h5><i class="fa fa-home" aria-hidden="true"></i>&nbsp;<i class="fa fa-angle-right" aria-hidden="true"></i>&nbsp;TC</h5>
+    <div class="main-inner">
+		<div class="main-content">
+			<div class="card" style="width: 60%; padding: 5%; margin: auto;">
+				<center><h3 style="margin-bottom: 6%;">Your TC</h3></center>
+                    <div style="display:flex; flex-direction:row;">
+                        <div style="width: 55%;">
+                            <p><b>Name :</b> {{tc.0.Name}}</p>
+                            <p><b>Admission No. :</b> {{tc.0.Admno}}</p>
+                            <p><b>TC No. :</b> {{tc.0.Tcno}}</p>
+                        </div>
+                        <div style="width: 35%;">
+                            <a  href="/media/{{tc.0.file}}"><button class="btn btn-success" style="margin:auto; width: 100%;" >View TC</button></a>
+                            <br><br>
+                            <a class="download-btn-style" href="/media/{{tc.0.file}}" download><button class="btn btn-success" style="margin:auto; width: 100%;" >Download TC</button></a>
+                        </div>
+                    </div>
+                </div>
+		</div>		
+    </div>
+</div>
+{% endblock %}
+    

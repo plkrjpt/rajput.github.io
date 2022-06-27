@@ -1,0 +1,17 @@
+.main{
+    padding:4%;
+}
+.main i{
+    color:#dc143c;
+}
+.main-inner{
+    margin-top: 5%;
+    min-height:50vh;
+}
+    /*gallery style */
+.item{
+    transition: .5s ease-in-out;
+}
+.item:hover{
+    filter: brightness(80%);
+}

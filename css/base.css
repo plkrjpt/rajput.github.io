@@ -1,0 +1,73 @@
+/* Nav Bar
+	-----------------------------------*/
+	.navbar {
+		color: red;
+		background: #002fa7 !important;
+		padding: 5px 15px;
+		border-radius: 0;
+		border: none;
+		box-shadow: 0 0 4px rgba(0,0,0,.1);
+	}
+
+	.navbar .navbar-nav > li {
+		color: #efe5ff;
+		margin-right:10px;
+		padding: 3px 0px;
+		font-size: 16px;
+		text-decoration:bold;
+	}
+	
+	.dropdown-submenu{
+    position: relative;
+	}
+	.dropdown-submenu a::after{
+	    transform: rotate(-90deg);
+	    position: absolute;
+	    right: 3px;
+	    top: 40%;
+	}
+	.dropdown-submenu:hover .dropdown-menu, .dropdown-submenu:focus .dropdown-menu{
+	    display: flex;
+	    flex-direction: column;
+	    position: absolute !important;
+	    margin-top: -30px;
+	    left: 100%;
+	}
+	@media (max-width: 992px) {
+	    .dropdown-menu{
+	        width: 50%;
+	    }
+	    .dropdown-menu .dropdown-submenu{
+	        width: auto;
+	    }
+	}
+	.main5{
+		background-color:#002fa7;
+		padding:60px;
+		display:flex;
+		flex-direction:row;
+		}
+	.about,.contact,.designedby{
+		margin:3%;
+		width:30%;
+	}
+	.footer{
+		display:flex;
+		align-items: center;
+		justify-content: center;
+		height:8vh;
+		background-color:#00237a;
+		}
+	.footer .ftext{
+		color:white;
+		font-size:1.0vw;
+	}
+		
+	.ftxth{
+		color:white;
+		font-size:2.5vw;
+	}
+	.ftxtp{
+		color:white;
+		font-size:1.1vw;
+	}

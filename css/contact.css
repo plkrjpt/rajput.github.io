@@ -1,0 +1,32 @@
+.main{
+    padding:4%;
+}
+.main i{
+    color:#dc143c;
+}
+.main-inner{
+    display:flex; 
+    flex-direction:row;
+}
+.address{
+    padding: 3%; 
+    width: 65%;
+}
+.map{
+    border:1px solid rgba(179, 179, 179, 0.842); 
+    width: 100%; 
+    height: 60vh; 
+    padding: 2%;
+}
+.form{
+    width: 40%; 
+    padding: 3%;
+}
+.py-4{
+    padding:6%; 
+    background-color: #f8f8ff;
+    margin-top:15%;
+}
+.d-grid button{
+    background-color:#002fa7 ;
+}

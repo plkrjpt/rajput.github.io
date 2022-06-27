@@ -1,0 +1,10 @@
+.main{
+    padding:4%;
+}
+.main i{
+    color:#dc143c;
+}
+.main-inner{
+    margin-top: 5%;
+    min-height:50vh;
+}

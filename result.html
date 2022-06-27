@@ -1,0 +1,47 @@
+{% extends 'aecsweb/basic.html' %}
+{% load static %}
+
+{% block css %}
+<link rel="stylesheet" href="{% static 'aecsweb/css/notices.css' %}">
+{% endblock%}
+
+{% block body %}
+<div class="main">
+    <h5><i class="fa fa-home" aria-hidden="true"></i>&nbsp;<i class="fa fa-angle-right" aria-hidden="true"></i>&nbsp;Result</h5>
+    <div class="main-inner">
+		<div class="main-content">
+			<form action="/result/" method="POST">
+				{% csrf_token %}
+			<div class="card" style="width: 60%; padding: 5%; margin: auto;">
+				<center><h3 style="margin-bottom: 6%;">Get Your Result</h3></center>
+            	<div class="input-group">
+                	<span class="input-group-text">Class & Year</span>
+					<select class="form-select" id="inputGroupSelect01" name="class">
+						<option selected>Class...</option>
+						<option value="6">Sixth</option>
+						<option value="7">Seventh</option>
+						<option value="8">Eighth</option>
+						<option value="9">Ninth</option>
+						<option value="11">Eleventh</option>
+					  </select>
+					  
+                	  <select class="form-select" id="inputGroupSelect01" name="year">
+						<option selected>Year...</option>
+						<option value="2022">2022</option>
+					  </select>
+              	</div>
+			  	<br>
+			  	<div class="input-group" style="margin-bottom: 7%;">
+                	<span class="input-group-text">Admission Number</span>
+                	<input type="text" aria-label="Year" class="form-control" name="admno">
+              	</div>
+				  <button type="submit" class="btn btn-success" style="margin:auto; width:40%;">View Result</button>   
+				  
+			</div>
+
+			</form>
+		</div>		
+    </div>
+</div>
+{% endblock %}
+    

@@ -1,0 +1,57 @@
+{% extends 'aecsweb/basic.html' %}
+{% load static %}
+
+{% block css %}
+<link rel="stylesheet" href="{% static 'aecsweb/css/contact.css' %}">
+{% endblock%}
+
+{% block body %}
+<div class="main">
+    <h5><i class="fa fa-home" aria-hidden="true"></i>&nbsp;<i class="fa fa-angle-right" aria-hidden="true"></i>&nbsp;Contact Us</h5>
+    <div class="main-inner">
+        <div class="address">
+            <h2>MDA Inter College</h2>
+            <p>Umrara, Debai, Bulandshahr,<br>Uttar Pradesh 203393 </p>
+            <p><i class="fa fa-phone"></i>&emsp;(+91)&nbsp;9720860456<br><i class="fa fa-fax"></i>&emsp;Fax:&nbsp;(+91)&nbsp;05734-222251<br><i class="fa fa-envelope"></i>&emsp;bhupendra1376@gmail.com</p>
+
+            <!--Google map-->
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d112537.39971847415!2d78.17938915820311!3d28.18318760000002!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390b4adf30b128f1%3A0x6c5781534b0caec6!2sM.D.A%20Inter%20College%20Umrara!5e0!3m2!1sen!2sin!4v1655891199994!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <!--Google Maps-->
+        </div>
+
+        <div class="form">
+            <h3>Get In Touch</h3>
+            <!-- Wrapper container -->
+            <div class="container py-4">
+                <!-- Bootstrap 5 starter form -->
+                <form id="contactForm" method="POST">
+                    {% csrf_token %}
+                    <!-- Name input -->
+                    <div class="mb-3">
+                        <label class="form-label" for="name">Name</label>
+                        <input class="form-control" id="name" type="text" placeholder="Name" name="name" data-sb-validations="required" />
+                    </div>
+            
+                    <!-- Email address input -->
+                    <div class="mb-3">
+                        <label class="form-label" for="emailAddress">Email Address</label>
+                        <input class="form-control" id="emailAddress" type="email" placeholder="Email Address" name="email" data-sb-validations="required, email" />
+                    </div>
+  
+                    <!-- Message input -->
+                    <div class="mb-3">
+                        <label class="form-label" for="message">Message</label>
+                        <textarea class="form-control" id="message" type="text" placeholder="Message" name="msg" style="height: 10rem;" data-sb-validations="required"></textarea>
+                    </div>
+  
+                    <!-- Form submit button -->
+                    <div class="d-grid">
+                        <button class="btn btn-primary btn-lg"  type="submit">Submit</button>
+                    </div>
+  
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,42 @@
+{% extends 'aecsweb/basic.html' %}
+{% load static %}
+
+{% block css %}
+<link rel="stylesheet" href="{% static 'aecsweb/css/notices.css' %}">
+{% endblock%}
+
+{% block body %}
+<div class="main">
+    <h5><i class="fa fa-home" aria-hidden="true"></i>&nbsp;<i class="fa fa-angle-right" aria-hidden="true"></i>&nbsp;Downloads&nbsp;<i class="fa fa-angle-right" aria-hidden="true"></i>&nbsp;{{title}}</h5>
+    <div class="main-inner">
+		<div class="main-content">
+            <!-- Recent Notices -->
+            {% if length == 0 %}
+			<center><br><br><br><h5 style="color: #535353;">Nothing To Download</h5></center>
+			{% else %}
+			<!-- Recent Notices -->
+			<table class="table table-hover table-condensed">
+                <thead>
+                    <tr>
+                        <th>S.No.</th>
+                        <th>File Name</th>
+                         <th>Download</th>
+                     </tr>
+                </thead>
+                <tbody>
+                    {% for i in download|slice:"0:" reversed %}
+                    <tr>
+                        <td>{{forloop.counter}}</td>
+			            <td style="width:65%;">{{i.title}}</td>
+			            <td><a class="download-btn-style" href="/media/{{i.file}}" download><div class="btn btn-xs btn-success">Download</div></a></td>
+                    </tr>
+					{% endfor %}
+                </tbody>
+            </table>
+			{% endif %}
+            
+		</div>		
+    </div>
+</div>
+{% endblock %}
+    

@@ -1,0 +1,44 @@
+{% extends 'aecsweb/basic.html' %}
+{% load static %}
+
+{% block css %}
+<link rel="stylesheet" href="{% static 'aecsweb/css/notices.css' %}">
+{% endblock%}
+
+{% block body %}
+<div class="main">
+    <h5><i class="fa fa-home" aria-hidden="true"></i>&nbsp;<i class="fa fa-angle-right" aria-hidden="true"></i>&nbsp;Staff</h5>
+    <div class="main-inner">
+		<div class="main-content">
+            <!-- Recent Notices -->
+            {% if length == 0 %}
+			<center><br><br><br><h5 style="color: #535353;">Nothing To Show</h5></center>
+			{% else %}
+			<!-- Recent Notices -->
+			<table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>S.No.</th>
+                        <th>Name</th>
+                        <th>Designation</th>
+                        <th>Subject</th>
+                     </tr>
+                </thead>
+                <tbody>
+                    {% for i in staff|slice:"0:" reversed %}
+                    <tr>
+                        <td>{{forloop.counter}}</td>
+			            <td style="width:30%;">{{i.Name}}</td>
+                        <td style="width:30%;">{{i.Designation}}</td>
+                        <td style="width:30%;">{{i.Subject}}</td>
+                    </tr>
+					{% endfor %}
+                </tbody>
+            </table>
+			{% endif %}
+            
+		</div>		
+    </div>
+</div>
+{% endblock %}
+    

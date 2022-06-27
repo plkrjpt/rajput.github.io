@@ -1,0 +1,201 @@
+/* Carousel
+	----------------------------------- */
+	#carouselBeadManRedding {
+	    background-color: #000;
+	}
+	.carousel.carousel-fade .carousel-item {
+	    display: block;
+	    opacity: 0;
+	    transition: opacity ease-out 1.7s;
+	    left: 0;
+	    top: 0;
+	    position: absolute;
+	}
+	.carousel.carousel-fade .carousel-item.active {
+	    opacity: 1 !important;
+	}
+	.carousel.carousel-fade .carousel-item:first-child {
+	    top: auto;
+	    position: relative;
+	    transition: opacity ease-out 1.7s;
+	}
+	.carousel.carousel-fade .carousel-item:second-child {
+	    top: auto;
+	    position: relative;
+	    transition: opacity ease-out 1.7s;
+	}
+	.carousel-item .img-fluid {
+	    margin: 0 auto;
+	}
+	.carousel img {
+	    opacity: 0.5;
+	    filter: alpha(opacity=50);
+	}
+
+	/*Quick Buttons
+	----------------------------------- */
+	
+	.Main-1-quickbtns{
+		width:100%;
+	}
+	.Main-1-quickbtns ul {
+	    padding: 0;
+	    list-style: none;
+	    font-size: 0;
+		width:100%;
+	}
+	.Main-1-quickbtns ul li{
+	    display: inline-block;
+	    padding:8px 16px;
+	    text-align: center;
+	    margin:0px;
+		width:25%;
+	}
+	.Main-1-quickbtns ul a{
+		color:white;
+		text-decoration: none;
+	    font-size: 16px;
+	}
+	.Main-1-quickbtns-1{
+	    background: #006400; /* Green */
+	}
+	.Main-1-quickbtns-2{
+	    background: #008000; /* Green */
+	}
+	.Main-1-quickbtns-3{
+	    background: #f5f5f5; /* Green */
+		color:black;
+	}
+	.Main-1-quickbtns-4{
+	    background: #b22222; /* Green */
+	}
+	/* Marquee
+	----------------------------------- */
+			
+	.marq {
+		height: 50px;
+		background-color: #002fa7;
+		color:white;
+		padding-top:10px;
+		padding-bottom:5px;
+    }
+
+	 /* Notice Styling*/
+	.Notice {
+	    padding:3%;
+	    float:right;
+	    width:60%;
+		height: 70%;
+	    color: white;
+	    background-color:#00a3a3;
+	    overflow: hidden;
+	}
+	.Notice_links{
+		padding-top: 10%;
+		padding-bottom:1%; 
+		color: #fffafa"
+	}
+	.Notice .slider {
+	    position: relative;
+	    box-sizing: border-box;
+	    animation: slider 6s linear infinite;
+	    list-style-type: none;
+	    text-align: center;
+	}
+
+	.Notice .slider:hover {
+	    animation-play-state: paused;
+	}
+
+	@keyframes slider {
+	    0%   { top:   10em }
+	    100% { top: -14em }
+	}
+
+	.blur .slider {
+	  	margin: 0;
+	    padding: 0 1em;
+	    line-height: 1.5em;
+	}
+
+	.blur:before, .blur::before,
+	.blur:after,  .blur::after {
+	    left: 0;
+	    z-index: 1;
+	    content: '';
+	    position: absolute;
+	    width: 100%; 
+	    height: 2em;
+	    background-image: linear-gradient(180deg, #FFF, rgba(255,255,255,0));
+	}
+
+	.blur:after, .blur::after {
+	    bottom: 0;
+	    transform: rotate(180deg);
+	}
+
+	.blur:before, .blur::before {
+	    top: 0;
+	}
+  
+	.Main2{
+		width:100%;
+		height:80vh;
+		background:#f5f5f5;
+		padding:4%;
+		margin-top:50px;
+
+	}
+	.Main2 div{
+		height:100%;
+		margin:2%;
+		display:inline-block;
+
+	}
+	.p_desk{
+		float:left;
+		width:30%;
+		padding:0%;
+		background:rgb(175, 175, 175);
+	}
+	
+	.Main3{
+		background:#f8f8ff;
+		width:100%;
+		padding:4%;
+		position:relative;
+	}
+	.about_school{
+		width:100%;
+	
+	}
+	.Main3 .carousel-cards{
+		display:inline-block;
+		width:20%;
+		margin:30px;
+	}
+	.Main3 .carousel-cards img{
+		width:100%;
+	}
+	.Main3 .Special_achivers h3{
+		color:#002fa7;
+	}
+	.Main4{
+		padding:4%;
+	}
+	.Main4 .card{
+		height:30vh;
+	}
+	.Main4 .carousel-cards{
+		display:inline-block;
+		width:25%;
+		margin:15px;
+	}
+	.Main4 .carousel-cards .card{
+		
+		background-color: #002fa7;
+		color:white;
+	}
+	.Main4 .Honors h3{
+		color:#002fa7;
+	}
